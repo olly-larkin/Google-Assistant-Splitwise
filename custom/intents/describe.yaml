@@ -1,0 +1,6 @@
+parameters:
+- name: description
+  type:
+    name: String
+trainingPhrases:
+- ($description 'description' auto=false)

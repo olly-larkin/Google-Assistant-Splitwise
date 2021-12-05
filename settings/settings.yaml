@@ -1,0 +1,15 @@
+category: PRODUCTIVITY
+defaultLocale: en
+localizedSettings:
+  developerEmail: ollylemonlarkin@gmail.com
+  developerName: Olly Larkin
+  displayName: Money Share
+  fullDescription: Splitwise addons
+  privacyPolicyUrl: https://github.com/olly-larkin/Google-Assistant-Splitwise/blob/main/privacy_policy.txt
+  pronunciation: Money Share
+  sampleInvocations:
+  - Talk to Money Share
+  shortDescription: Splitwise addons
+  smallLogoImage: https://lh3.googleusercontent.com/-bCnHR8gNsDM/YazE2xDyOoI/AAAAAAAAbeA/y9Ey7Ljtu9oSPlseOMgbENUkF__PxraBACO0EGAYYCw/h192-w192/splitwise_logo.png
+  voice: female_1
+projectId: splitwise-14df3

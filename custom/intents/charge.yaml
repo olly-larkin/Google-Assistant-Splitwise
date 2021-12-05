@@ -1,0 +1,42 @@
+parameters:
+- name: name
+  type:
+    name: String
+- name: pounds
+  type:
+    name: actions.type.Number
+- name: pence
+  type:
+    name: actions.type.Number
+- name: group
+  type:
+    name: String
+trainingPhrases:
+- charge ($name 'name' auto=false) £($pounds '4' auto=false) ($pence '50' auto=false)
+  in ($group 'group' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false) ($pence '50' auto=false)
+  on ($group 'group' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false) ($pence '50' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false).($pence '50' auto=false)
+  in ($group 'group' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false).($pence '50' auto=false)
+  on ($group 'group' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false).($pence '50' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false) in ($group 'group' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false) on ($group 'group' auto=false)
+- charge ($name 'name' auto=false) £($pounds '4' auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) pound ($pence '50' auto=false)
+  in ($group 'group' auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) pound ($pence '50' auto=false)
+  on ($group 'group' auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) pound ($pence '50' auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) pounds in ($group 'group'
+  auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) pounds on ($group 'group'
+  auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) pounds
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) ($pence '50' auto=false)
+  in ($group 'group' auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) ($pence '50' auto=false)
+  on ($group 'group' auto=false)
+- charge ($name 'name' auto=false) ($pounds '4' auto=false) ($pence '50' auto=false)

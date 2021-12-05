@@ -1,0 +1,8 @@
+handlers:
+- name: charge
+- name: confirm
+- name: repeat_confirmation
+- name: add_description
+- name: pay
+inlineCloudFunction:
+  executeFunction: ActionsOnGoogleFulfillment

@@ -1,0 +1,49 @@
+intentEvents:
+- handler:
+    webhookHandler: confirm
+  intent: actions.intent.YES
+  transitionToScene: actions.scene.END_CONVERSATION
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Let's try again.
+  intent: actions.intent.NO
+  transitionToScene: Splitwise
+- handler:
+    webhookHandler: repeat_confirmation
+  intent: actions.intent.REPEAT
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Sorry I didn't get that. Try again?
+  intent: actions.intent.NO_MATCH_1
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Sorry. One more time?
+  intent: actions.intent.NO_MATCH_2
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Sorry I don't understand.
+  intent: actions.intent.NO_MATCH_FINAL
+  transitionToScene: actions.scene.END_CONVERSATION
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        suggestions:
+        - title: "Yes"
+        - title: "No"

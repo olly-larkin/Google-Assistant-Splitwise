@@ -1,0 +1,41 @@
+intentEvents:
+- handler:
+    webhookHandler: charge
+  intent: charge
+  transitionToScene: GetDescription
+- handler:
+    webhookHandler: pay
+  intent: pay
+  transitionToScene: GetDescription
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Sorry I didn't get that. Try again?
+  intent: actions.intent.NO_MATCH_1
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Sorry. One more time?
+  intent: actions.intent.NO_MATCH_2
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Sorry I don't understand.
+  intent: actions.intent.NO_MATCH_FINAL
+  transitionToScene: actions.scene.END_CONVERSATION
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: What can I do for you?
